@@ -7,7 +7,7 @@ int main(){
     cout << "Enter Celsius Temperature: ";
     cin >> celsius;
 
-    float fahrenheit = ((9/5)* celsius) + 32;
+    float fahrenheit = ((9.0/5.0)* celsius) + 32;
 
     cout << "The Fahrenheit temperature is " << fahrenheit << endl; 
 
