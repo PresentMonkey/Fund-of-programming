@@ -3,9 +3,9 @@
 #include <vector>
 using namespace std;
 
-float calculate(std::string_view plan, int gigs){
+float calculate(char plan, int gigs){
     switch(plan){
-        case "A":   
+        case 'A':   
             if(gigs <= 4){
                 return 39.99;
             }
@@ -13,7 +13,7 @@ float calculate(std::string_view plan, int gigs){
                 return 39.99 + (10 * (gigs - 4));
             }
             break;
-        case "B":
+        case 'B':
             if(gigs <= 8){
                 return 59.99;
             }
@@ -21,30 +21,29 @@ float calculate(std::string_view plan, int gigs){
                 return 59.55 + (5 * (gigs - 8));
             }
             break;
-        case "C": 
+        case 'C': 
             return 69.99;
     }
 }
 
-bool validate_input(string input){
+bool validate_input(char input){
     vector<char> valid_chars = {'A', 'B', 'C'};
+    bool valid = false;
     for(auto i: valid_chars){
-        if(input.find(i) != std::string::npos){
-            return true;
-        }
-        else{
-            return false;
+        if(input == i){
+            valid = true;
         }
     } 
+    return valid;
 }
 
 int main(){
-    string plan;
+    char plan;
     int gigs_used;
     cout << "What package have you purchased? (A, B, C): ";
     cin >> plan;
 
-    if(validate_input(plan)){
+    if(!validate_input(plan)){
         cout << "Invalid input, please try again: " << endl;
         main();
     }
