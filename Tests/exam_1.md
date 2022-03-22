@@ -17,21 +17,21 @@
 7. Escape sequences are always stored internally as a single character
    * True
 8. In programming the terms `line` and `statement` always mean the same thing
-   * False
+	* False
 9. A CPU really only understands instructions that are written in machine language
-   * True
+	* True
 10. The `cin` will stop reading input when in encounters a newline character
-   * True
+	* True
 11. A variable called `average` should be declared as an integer datatype because it will probably contain data with decimal places
-   * False
+	* False
 12. Floating points constants are normally stored in memory as `doubles`
-   * False (usually as floats)
+	* False (usually as floats)
 13. The preprocessor execute after the compiler
-   * False (before)
+	* False (before)
 14. In C++, keywords are written in all lowercase letter
-   * False (case sensetive, but you can use both)
+	* False (case sensetive, but you can use both)
 15. If you want to length of string that is stored as a string object, you call the object's `size()` member function
-   * False (size returns size in memory, not char length. Use `length()` instead)
+  * False (size returns size in memory, not char length. Use `length()` instead)
 16. If you do not follow a consistent programming style, your programs will generate compiler errors.
     * False
 17. When typing in your source code, you must be very careful since most of your C++ instructions are case sensitive.
