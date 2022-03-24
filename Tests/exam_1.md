@@ -13,7 +13,7 @@
 5. Arithmetic operators that share the same precedence have right to left associativity
    * False
 6. C++ does not have a built in data type for storing strings of data
-   * True ?
+   * False ?
 7. Escape sequences are always stored internally as a single character
    * True
 8. In programming the terms `line` and `statement` always mean the same thing
