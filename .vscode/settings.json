@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "ostream": "cpp"
     },
     "cSpell.ignoreWords": [
         "setprecision"
