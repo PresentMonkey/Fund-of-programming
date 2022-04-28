@@ -6,7 +6,7 @@ enum menu_item{
     subtract = 2,
     multiply = 3,
     divide = 4,
-    exit = 5
+    exit_option = 5
 };
 
 struct user_numbers{
@@ -36,40 +36,51 @@ user_numbers ask(){
     return return_value;
 }
 
-int add(user_numbers input){
+int do_add(user_numbers input){
     return input.number1 + input.number2;
 }
 
-int subtract(user_numbers input){
+int do_subtract(user_numbers input){
     return input.number1 - input.number2;
 }
 
-int multiply(user_numbers input){
+int do_multiply(user_numbers input){
     return input.number1 * input.number2;
 }
 
-int divide(user_numbers input){
+int do_divide(user_numbers input){
     if(input.number2 == 0){
         cout << "Cannot divide by a negative! " << endl;
     }
+    return input.number1 / input.number2;
 }
 
-void menu(){
+int main(){
     display_menu();
     int input;
     cin >> input;
     if(!(1 <= input and input <= 5)){
-        menu();
-    }
-    user_numbers user_number_input = ask();
-    switch(choice){
-        case add:{
-
-        }
+        main();
     }
     
-}
-
-int main(){
-
+    user_numbers user_number_input = ask();
+    
+    switch(input){
+        case add:{
+            cout << "Your answer is: " << do_add(user_number_input) << endl; break;
+        }
+        case subtract:{
+            cout << "Your answer is: " << do_subtract(user_number_input) << endl; break;
+        }
+        case multiply:{
+            cout << "Your answer is: " << do_multiply(user_number_input) << endl; break;
+        }
+        case divide:{
+            cout << "Your answer is: " << do_divide(user_number_input) << endl; break;
+        }
+        case exit_option:{
+            exit(0);
+        }
+    }
+    main();
 }
